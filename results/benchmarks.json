@@ -1,0 +1,29 @@
+{
+    "benchmarks.StartupSuite.time_help_np": {
+        "code": "def time_help_np(self):\n    call([\"datalad\", \"--help-np\"], env=self.env)\n", 
+        "goal_time": 2.0, 
+        "name": "benchmarks.StartupSuite.time_help_np", 
+        "number": 0, 
+        "param_names": [], 
+        "params": [], 
+        "pretty_name": "benchmarks.StartupSuite.time_help_np", 
+        "repeat": 0, 
+        "timeout": 60.0, 
+        "type": "time", 
+        "unit": "seconds"
+    }, 
+    "benchmarks.StartupSuite.time_import": {
+        "code": "def time_import(self):\n    call([sys.executable, \"-c\", \"'import datalad'\"])\n", 
+        "goal_time": 2.0, 
+        "name": "benchmarks.StartupSuite.time_import", 
+        "number": 0, 
+        "param_names": [], 
+        "params": [], 
+        "pretty_name": "benchmarks.StartupSuite.time_import", 
+        "repeat": 0, 
+        "timeout": 60.0, 
+        "type": "time", 
+        "unit": "seconds"
+    }, 
+    "version": 1
+}
