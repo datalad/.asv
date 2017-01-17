@@ -29,7 +29,7 @@
         "code": "def time_help_np(self):\n    call([\"datalad\", \"--help-np\"], env=self.env)\n", 
         "goal_time": 2.0, 
         "name": "benchmarks.StartupSuite.time_help_np", 
-        "number": 5, 
+        "number": 0, 
         "param_names": [], 
         "params": [], 
         "pretty_name": "benchmarks.StartupSuite.time_help_np", 
@@ -39,10 +39,10 @@
         "unit": "seconds"
     }, 
     "benchmarks.StartupSuite.time_import": {
-        "code": "def time_import(self):\n    call([sys.executable, \"-c\", \"'import datalad'\"])\n", 
+        "code": "def time_import(self):\n    call([sys.executable, \"-c\", \"import datalad\"])\n", 
         "goal_time": 2.0, 
         "name": "benchmarks.StartupSuite.time_import", 
-        "number": 5, 
+        "number": 0, 
         "param_names": [], 
         "params": [], 
         "pretty_name": "benchmarks.StartupSuite.time_import", 
@@ -52,10 +52,10 @@
         "unit": "seconds"
     }, 
     "benchmarks.StartupSuite.time_import_api": {
-        "code": "def time_import_api(self):\n    call([sys.executable, \"-c\", \"'import datalad.api'\"])\n", 
+        "code": "def time_import_api(self):\n    call([sys.executable, \"-c\", \"import datalad.api\"])\n", 
         "goal_time": 2.0, 
         "name": "benchmarks.StartupSuite.time_import_api", 
-        "number": 5, 
+        "number": 0, 
         "param_names": [], 
         "params": [], 
         "pretty_name": "benchmarks.StartupSuite.time_import_api", 
