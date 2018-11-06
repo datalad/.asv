@@ -1,0 +1,201 @@
+{
+    "benchmark_version": {
+        "api.supers.time_createadd": "9627ffa29956a92e4610615ede7b621bbe831df9d5aaf99d228a681b49a65b1f", 
+        "api.supers.time_createadd_to_dataset": "994ddd7edd278a30db53653e54e9976a39e1bde83b663d095e76217d683e1992", 
+        "api.supers.time_installr": "f9cd0ceef63e4692e520a08a0d61942b9f08151fbe0ff38bc562aab505e7d204", 
+        "api.supers.time_ls": "090ffbfc5ed895f49055534c197753baacb35f8bb3c1a69013c1011738ca300f", 
+        "api.supers.time_ls_recursive": "d02744c6b0c50fb150b7e596ca541160f70a4933daac66d3b78b7ccdd6fc6c2f", 
+        "api.supers.time_ls_recursive_long_all": "b87eb69e3352d67e40bc22b3f54e9be3b4f11eeb821186da240031e4953764b9", 
+        "api.supers.time_remove": "d90e236129ab9910e61fb2ce6efa667543c915f46b937ef5187a0658369b4fa0", 
+        "api.testds.time_create_test_dataset1": "9ecd497c5dd148ef03187ff8e66872e3a1ae97083bbf12e726b9fadfc6358f8e", 
+        "api.testds.time_create_test_dataset2x2": "fca09bf52102f408d7d0a57e79ddbbb329eda25dffaf38c863f3271f7b7547c0", 
+        "core.runner.time_echo": "fa3e886cf31276383138dcece3a41704add08700c4c756bcd65830edd5f87764", 
+        "core.runner.time_echo_gitrunner": "e128fce0653554d3d8f58f8b55c32414bb826b3ca7350b43cbf171ce3e6f6e32", 
+        "core.startup.time_help_np": "78c62df8b90b52ee22470b016afc051ef28ea2b4598ecaf3337d7c1d8a142479", 
+        "core.startup.time_import": "5a62b417a0fe0b72410c5ac3b48be93ecac330c06565763b0209e5d0fedcc05e", 
+        "core.startup.time_import_api": "ad7803b5cd3d3e2b45adbdbf8df9b4a3d483d0da621644a9476182740cb46246"
+    }, 
+    "commit_hash": "56fca930ac09fc3fffb8b341e07cb9ad783aeb2e", 
+    "date": 1539692252000, 
+    "ended_at": {
+        "api.supers.time_createadd": 1541452754430, 
+        "api.supers.time_createadd_to_dataset": 1541452754431, 
+        "api.supers.time_installr": 1541452754431, 
+        "api.supers.time_ls": 1541452754431, 
+        "api.supers.time_ls_recursive": 1541452754432, 
+        "api.supers.time_ls_recursive_long_all": 1541452754432, 
+        "api.supers.time_remove": 1541452754432, 
+        "api.testds.time_create_test_dataset1": 1541452766544, 
+        "api.testds.time_create_test_dataset2x2": 1541452757046, 
+        "core.runner.time_echo": 1541452766748, 
+        "core.runner.time_echo_gitrunner": 1541452766952, 
+        "core.startup.time_help_np": 1541452770463, 
+        "core.startup.time_import": 1541452771319, 
+        "core.startup.time_import_api": 1541452774326
+    }, 
+    "env_name": "virtualenv-py3.4", 
+    "params": {
+        "arch": "x86_64", 
+        "cpu": "Intel(R) Xeon(R) CPU E5-1607 v2 @ 3.00GHz", 
+        "machine": "drogon-neurodebian1.1", 
+        "os": "Linux 4.6.0-rc1+", 
+        "python": "3.4", 
+        "ram": "65948008"
+    }, 
+    "profiles": {}, 
+    "python": "3.4", 
+    "requirements": {}, 
+    "results": {
+        "api.supers.time_createadd": null, 
+        "api.supers.time_createadd_to_dataset": null, 
+        "api.supers.time_installr": null, 
+        "api.supers.time_ls": null, 
+        "api.supers.time_ls_recursive": null, 
+        "api.supers.time_ls_recursive_long_all": null, 
+        "api.supers.time_remove": null, 
+        "api.testds.time_create_test_dataset1": {
+            "result": [
+                0.27480173483490944
+            ], 
+            "stats": [
+                {
+                    "ci_99": [
+                        0.2716771326959133, 
+                        0.2834591828286648
+                    ], 
+                    "max": 0.2834591828286648, 
+                    "mean": 0.2763625029474497, 
+                    "min": 0.2716771326959133, 
+                    "number": 1, 
+                    "q_25": 0.2732454100623727, 
+                    "q_75": 0.27908469876274467, 
+                    "repeat": 10, 
+                    "std": 0.004055829978312697
+                }
+            ]
+        }, 
+        "api.testds.time_create_test_dataset2x2": null, 
+        "core.runner.time_echo": {
+            "result": [
+                0.0015584358147212435
+            ], 
+            "stats": [
+                {
+                    "ci_99": [
+                        0.0015139970928430557, 
+                        0.0017634004886661256
+                    ], 
+                    "max": 0.0017634004886661256, 
+                    "mean": 0.0015809144026466778, 
+                    "min": 0.0015139970928430557, 
+                    "number": 7, 
+                    "q_25": 0.00153494586369821, 
+                    "q_75": 0.0015720206845019546, 
+                    "repeat": 10, 
+                    "std": 7.730227837035801e-05
+                }
+            ]
+        }, 
+        "core.runner.time_echo_gitrunner": {
+            "result": [
+                0.0024497518315911293
+            ], 
+            "stats": [
+                {
+                    "ci_99": [
+                        0.0022910120896995068, 
+                        0.002679044846445322
+                    ], 
+                    "max": 0.002679044846445322, 
+                    "mean": 0.002472361642867327, 
+                    "min": 0.0022910120896995068, 
+                    "number": 4, 
+                    "q_25": 0.0023881964152678847, 
+                    "q_75": 0.0025704798754304647, 
+                    "repeat": 10, 
+                    "std": 0.00012034607908569816
+                }
+            ]
+        }, 
+        "core.startup.time_help_np": {
+            "result": [
+                0.5718885017558932
+            ], 
+            "stats": [
+                {
+                    "ci_99": [
+                        0.5314747989177704, 
+                        0.5940149035304785
+                    ], 
+                    "max": 0.5940149035304785, 
+                    "mean": 0.563803230598569, 
+                    "min": 0.5314747989177704, 
+                    "number": 1, 
+                    "q_25": 0.536537429317832, 
+                    "q_75": 0.5879166633822024, 
+                    "repeat": 10, 
+                    "std": 0.025184090329365832
+                }
+            ]
+        }, 
+        "core.startup.time_import": {
+            "result": [
+                0.12784180603921413
+            ], 
+            "stats": [
+                {
+                    "ci_99": [
+                        0.10627732612192631, 
+                        0.16225484758615494
+                    ], 
+                    "max": 0.16225484758615494, 
+                    "mean": 0.12869705650955438, 
+                    "min": 0.10627732612192631, 
+                    "number": 1, 
+                    "q_25": 0.11091565666720271, 
+                    "q_75": 0.14148885291069746, 
+                    "repeat": 10, 
+                    "std": 0.019044091738648163
+                }
+            ]
+        }, 
+        "core.startup.time_import_api": {
+            "result": [
+                0.4672892428934574
+            ], 
+            "stats": [
+                {
+                    "ci_99": [
+                        0.4626707397401333, 
+                        0.5218830332159996
+                    ], 
+                    "max": 0.5218830332159996, 
+                    "mean": 0.48628087863326075, 
+                    "min": 0.4626707397401333, 
+                    "number": 1, 
+                    "q_25": 0.4642768823541701, 
+                    "q_75": 0.5173449474386871, 
+                    "repeat": 10, 
+                    "std": 0.026432054491663286
+                }
+            ]
+        }
+    }, 
+    "started_at": {
+        "api.supers.time_createadd": 1541452753251, 
+        "api.supers.time_createadd_to_dataset": 1541452754430, 
+        "api.supers.time_installr": 1541452754431, 
+        "api.supers.time_ls": 1541452754431, 
+        "api.supers.time_ls_recursive": 1541452754431, 
+        "api.supers.time_ls_recursive_long_all": 1541452754432, 
+        "api.supers.time_remove": 1541452754432, 
+        "api.testds.time_create_test_dataset1": 1541452764737, 
+        "api.testds.time_create_test_dataset2x2": 1541452756191, 
+        "core.runner.time_echo": 1541452766545, 
+        "core.runner.time_echo_gitrunner": 1541452766748, 
+        "core.startup.time_help_np": 1541452766952, 
+        "core.startup.time_import": 1541452770464, 
+        "core.startup.time_import_api": 1541452771319
+    }, 
+    "version": 1
+}
