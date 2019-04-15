@@ -355,7 +355,7 @@
         "warmup_time": -1
     }, 
     "core.runner.time_echo": {
-        "code": "class runner:\n    def time_echo(self):\n        self.runner.run(\"echo\")\n\n    def setup(self):\n        from datalad.cmd import Runner\n        self.runner = Runner()\n        # older versions might not have it\n        try:\n            from datalad.cmd import GitRunner\n            self.git_runner = GitRunner()\n        except ImportError:\n            pass", 
+        "code": "class runner:\n    def time_echo(self):\n        self.runner.run(\"echo\")\n\n    def setup(self):\n        self.runner = Runner()\n        # older versions might not have it\n        try:\n            from datalad.cmd import GitRunner\n            self.git_runner = GitRunner()\n        except ImportError:\n            pass", 
         "min_run_count": 2, 
         "name": "core.runner.time_echo", 
         "number": 0, 
@@ -367,11 +367,11 @@
         "timeout": 60.0, 
         "type": "time", 
         "unit": "seconds", 
-        "version": "fa3e886cf31276383138dcece3a41704add08700c4c756bcd65830edd5f87764", 
+        "version": "5d8402946b9aefb9e96c6528161297f5924e519ff36672cad12fbee549fa82be", 
         "warmup_time": -1
     }, 
     "core.runner.time_echo_gitrunner": {
-        "code": "class runner:\n    def time_echo_gitrunner(self):\n        self.git_runner.run(\"echo\")\n\n    def setup(self):\n        from datalad.cmd import Runner\n        self.runner = Runner()\n        # older versions might not have it\n        try:\n            from datalad.cmd import GitRunner\n            self.git_runner = GitRunner()\n        except ImportError:\n            pass", 
+        "code": "class runner:\n    def time_echo_gitrunner(self):\n        self.git_runner.run(\"echo\")\n\n    def setup(self):\n        self.runner = Runner()\n        # older versions might not have it\n        try:\n            from datalad.cmd import GitRunner\n            self.git_runner = GitRunner()\n        except ImportError:\n            pass", 
         "min_run_count": 2, 
         "name": "core.runner.time_echo_gitrunner", 
         "number": 0, 
@@ -383,8 +383,58 @@
         "timeout": 60.0, 
         "type": "time", 
         "unit": "seconds", 
-        "version": "e128fce0653554d3d8f58f8b55c32414bb826b3ca7350b43cbf171ce3e6f6e32", 
+        "version": "d5e9ed1e2296b8ac7242eb11468893019ff2f49a02c4e1ee0e4f0928cc37d742", 
         "warmup_time": -1
+    }, 
+    "core.runner.track_overhead_100ms": {
+        "code": "class runner:\n    def track_overhead_100ms(self):\n        return self._get_overhead(\"sleep 0.1\")\n\n    def setup(self):\n        self.runner = Runner()\n        # older versions might not have it\n        try:\n            from datalad.cmd import GitRunner\n            self.git_runner = GitRunner()\n        except ImportError:\n            pass", 
+        "name": "core.runner.track_overhead_100ms", 
+        "param_names": [], 
+        "params": [], 
+        "timeout": 60.0, 
+        "type": "track", 
+        "unit": "% overhead", 
+        "version": "37e43e515d034a52c60b6b222bf98d531893ecbde6fa7c8b68b279aed94caf7e"
+    }, 
+    "core.runner.track_overhead_echo": {
+        "code": "class runner:\n    def track_overhead_echo(self):\n        return self._get_overhead(\"echo\")\n\n    def setup(self):\n        self.runner = Runner()\n        # older versions might not have it\n        try:\n            from datalad.cmd import GitRunner\n            self.git_runner = GitRunner()\n        except ImportError:\n            pass", 
+        "name": "core.runner.track_overhead_echo", 
+        "param_names": [], 
+        "params": [], 
+        "timeout": 60.0, 
+        "type": "track", 
+        "unit": "% overhead", 
+        "version": "b35018dec7cda8021be12fdc6c029144f7f4ffacd20bdf5abbf4884cbb922ee0"
+    }, 
+    "core.runner.track_overhead_heavyout": {
+        "code": "class runner:\n    def track_overhead_heavyout(self):\n        # run busyloop for 100ms outputing as much as it could\n        return self._get_overhead(heavyout_cmd)\n\n    def setup(self):\n        self.runner = Runner()\n        # older versions might not have it\n        try:\n            from datalad.cmd import GitRunner\n            self.git_runner = GitRunner()\n        except ImportError:\n            pass", 
+        "name": "core.runner.track_overhead_heavyout", 
+        "param_names": [], 
+        "params": [], 
+        "timeout": 60.0, 
+        "type": "track", 
+        "unit": "% overhead", 
+        "version": "4ca8fb7797045e550d0cc6cd204190bc2756d9388cc7add46ef9c9cd5732801d"
+    }, 
+    "core.runner.track_overhead_heavyout_online_process": {
+        "code": "class runner:\n    def track_overhead_heavyout_online_process(self):\n        return self._get_overhead(heavyout_cmd,\n                                  log_stdout=lambda s: '',\n                                  log_stderr='offline',  # needed to would get stuck\n                                  log_online=True)\n\n    def setup(self):\n        self.runner = Runner()\n        # older versions might not have it\n        try:\n            from datalad.cmd import GitRunner\n            self.git_runner = GitRunner()\n        except ImportError:\n            pass", 
+        "name": "core.runner.track_overhead_heavyout_online_process", 
+        "param_names": [], 
+        "params": [], 
+        "timeout": 60.0, 
+        "type": "track", 
+        "unit": "% overhead", 
+        "version": "c4043670205c71b53589e83c41caf0bd3f5c57379d46581f32fddc9f0d63a897"
+    }, 
+    "core.runner.track_overhead_heavyout_online_through": {
+        "code": "class runner:\n    def track_overhead_heavyout_online_through(self):\n        return self._get_overhead(heavyout_cmd,\n                                  log_stderr='offline',  # needed to would get stuck\n                                  log_online=True)\n\n    def setup(self):\n        self.runner = Runner()\n        # older versions might not have it\n        try:\n            from datalad.cmd import GitRunner\n            self.git_runner = GitRunner()\n        except ImportError:\n            pass", 
+        "name": "core.runner.track_overhead_heavyout_online_through", 
+        "param_names": [], 
+        "params": [], 
+        "timeout": 60.0, 
+        "type": "track", 
+        "unit": "% overhead", 
+        "version": "921d2f82de4ac5941b2568137e54456b22a1bab5e823acfe9969cdb1207f182f"
     }, 
     "core.startup.time_help_np": {
         "code": "class startup:\n    def time_help_np(self):\n        call([\"datalad\", \"--help-np\"], env=self.env)\n\n    def setup(self):\n        # we need to prepare/adjust PATH to point to installed datalad\n        # We will base it on taking sys.executable\n        python_path = osp.dirname(sys.executable)\n        self.env = os.environ.copy()\n        self.env['PATH'] = '%s:%s' % (python_path, self.env.get('PATH', ''))", 
